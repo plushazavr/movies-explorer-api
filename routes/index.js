@@ -4,7 +4,7 @@ const userRouter = require('./users');
 const movieRouter = require('./movies');
 const { createUser, login, logout } = require('../controllers/users');
 const { createUserValidator, loginValidator } = require('../utils/celebrate-validators');
-const { NotFoundError } = require('../errors/404_not-found-error');
+const { NotFoundError } = require('../errors/NotFoundError');
 const { ROUTE_NOT_FOUND } = require('../utils/constants');
 
 router.all('/', auth);

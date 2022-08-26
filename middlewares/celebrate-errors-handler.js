@@ -1,5 +1,5 @@
 const { isCelebrateError } = require('celebrate');
-const { BadRequestError } = require('../errors/400_bad-request-error');
+const { BadRequestError } = require('../errors/BadRequestError');
 
 const celebrateErrorHandler = (err, req, res, next) => {
   if (isCelebrateError(err)) {

@@ -1,8 +1,8 @@
 const Movie = require('../models/movie');
-const { BadRequestError } = require('../errors/400_bad-request-error');
-const { ForbiddenError } = require('../errors/403_forbidden-error');
-const { NotFoundError } = require('../errors/404_not-found-error');
-const { ConflictError } = require('../errors/409_conflict-error');
+const { BadRequestError } = require('../errors/BadRequestError');
+const { ForbiddenError } = require('../errors/ForbiddenError');
+const { NotFoundError } = require('../errors/NotFoundError');
+const { ConflictError } = require('../errors/ConflictError');
 const {
   MOVIE_CONFLICT, MOVIE_NOT_FOUND, MOVIE_FORBIDDEN, MOVIE_SUCCESS_REMOVE, ID_BAD_REQUEST,
 } = require('../utils/constants');

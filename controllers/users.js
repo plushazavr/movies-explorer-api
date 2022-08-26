@@ -1,9 +1,9 @@
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const User = require('../models/user');
-const { BadRequestError } = require('../errors/400_bad-request-error');
-const { NotFoundError } = require('../errors/404_not-found-error');
-const { ConflictError } = require('../errors/409_conflict-error');
+const { BadRequestError } = require('../errors/BadRequestError');
+const { NotFoundError } = require('../errors/NotFoundError');
+const { ConflictError } = require('../errors/ConflictError');
 const {
   OK, EMAIL_CONFLICT, USER_NOT_FOUND, GOODBYE,
 } = require('../utils/constants');

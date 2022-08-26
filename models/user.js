@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const validator = require('validator');
 const bcrypt = require('bcryptjs');
 
-const { UnauthorizedError } = require('../errors/401_unauthorized-error');
+const { UnauthorizedError } = require('../errors/UnauthorizedError');
 const {
   INVALID_EMAIL_OR_PASSWORD,
   EMAIL_IS_REQUIRED,
