@@ -9,7 +9,6 @@ const {
 
 const getMovies = (req, res, next) => {
   Movie.find({ owner: req.user._id })
-    .populate(['owner'])
     .then((movies) => {
       res.send(movies);
     })
@@ -24,7 +23,7 @@ const addMovie = (req, res, next) => {
     year,
     description,
     image,
-    trailer,
+    trailerLink,
     thumbnail,
     movieId,
     nameRU,
@@ -42,19 +41,15 @@ const addMovie = (req, res, next) => {
         year,
         description,
         image,
-        trailer,
+        trailerLink,
         thumbnail,
         owner: req.user._id,
         movieId,
         nameRU,
         nameEN,
       })
-        .then(({ _id }) => {
-          Movie.findById(_id)
-            .then((movie) => {
-              res.send(movie);
-            })
-            .catch(next);
+        .then((movie) => {
+          res.send(movie);
         })
         .catch((err) => {
           if (err.name === 'ValidationError') {

@@ -47,7 +47,7 @@ const movieSchema = new mongoose.Schema({
       message: IMAGE_INVALID,
     },
   },
-  trailer: {
+  trailerLink: {
     type: String,
     required: [true, TRAILER_IS_REQUIRED],
     validate: {
