@@ -160,7 +160,7 @@ const addMovieValidator = celebrate({
         'any.required': 'Поле {#label} обязательно для заполнения',
         'string.empty': 'Поле {#label} не может быть пустым',
       }),
-      trailerLink: Joi
+    trailerLink: Joi
       .string()
       .custom(validateURL)
       .required()
